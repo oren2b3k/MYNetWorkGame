@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3129584755877613969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3129584755877613974}
+  - component: {fileID: 3129584755877613931}
+  - component: {fileID: 3129584755877613972}
+  m_Layer: 0
+  m_Name: NetWorkManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3129584755877613974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129584755877613969}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3129584755877613931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129584755877613969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102d984a17bbf444b8270449ae7131ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 1
+  runInBackground: 1
+  autoStartServerBuild: 1
+  serverTickRate: 30
+  offlineScene: Assets/Scenes/Scene_Map.unity
+  onlineScene: 
+  transport: {fileID: 3129584755877613972}
+  networkAddress: localhost
+  maxConnections: 100
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 4242782964904057209, guid: 818649af36f8dec4ab869d7745f2b9d4, type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 1
+  spawnPrefabs:
+  - {fileID: 2019775398173045304, guid: 75db0114da65b634c96789db9190143d, type: 3}
+  - {fileID: 7918680515264477609, guid: 058d2db56d96c2c4982b25c2880d65fc, type: 3}
+  - {fileID: 1313977239789289567, guid: 219ef57b1a057ea41a62776f4121d5a9, type: 3}
+  - {fileID: 7730659104051723845, guid: e57df95ec8530774faf838498bc2c26d, type: 3}
+  - {fileID: 8719351277674961272, guid: d2afa814029b4174e956c45c043930fb, type: 3}
+  - {fileID: 5514573769317999765, guid: 8b3efe34a558e3348b9beb447c0ad573, type: 3}
+  - {fileID: 454383039980672853, guid: b51a47482c45d6d41a06406f17149726, type: 3}
+  - {fileID: 6672533507789839104, guid: 51655f1275b1b4d499924702d7c0345b, type: 3}
+  - {fileID: 5223154321237581706, guid: 63cf693db13c85e48bf3cd6a509393db, type: 3}
+  unitBase_Prefab: {fileID: 7918680515264477609, guid: 058d2db56d96c2c4982b25c2880d65fc, type: 3}
+  gameoverhandlerprefab: {fileID: 1963720876805682862, guid: 75db0114da65b634c96789db9190143d, type: 3}
+--- !u!114 &3129584755877613972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129584755877613969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Port: 12345
+  DualMode: 1
+  NoDelay: 1
+  Interval: 10
+  Timeout: 10000
+  FastResend: 2
+  CongestionWindow: 0
+  SendWindowSize: 4096
+  ReceiveWindowSize: 4096
+  MaxRetransmit: 40
+  NonAlloc: 1
+  MaximizeSendReceiveBuffersToOSLimit: 1
+  ReliableMaxMessageSize: 298449
+  UnreliableMaxMessageSize: 1199
+  debugLog: 0
+  statisticsGUI: 0
+  statisticsLog: 0
